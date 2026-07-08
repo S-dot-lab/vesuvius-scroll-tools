@@ -55,6 +55,11 @@ Run `validate.py` to check any segment against the scan volume. On PHerc0172 (Sc
 So the labels land on real papyrus far more than chance — the 3D placement is correct. Lift itself is
 **~1 s (CPU)**; the ink sits on the 3D wrap in a thin depth band, not smeared across layers (`docs/`).
 
+**Across 7 Scroll 5 segments** the on-papyrus ratio is consistently above chance — **mean 1.43×**, range
+1.16–1.8× (w062 1.65, w067 1.80, w078 1.60, w079 1.16, w080 1.34, w082 1.33, w083 1.46). Segments with a low
+ratio (e.g. w079, which also has only 57% of points inside the scroll) tend to have less accurate released
+geometry — so `validate.py`'s ratio doubles as a cheap per-segment geometry sanity check.
+
 **Honest limits:** placement is *correct but coarse* — the released `tifxyz` is downsampled ~20×, so
 labels are accurate to a handful of voxels, not sub-voxel. Output quality is also bounded by the input
 2D label: lifting a crisp human label gives a crisp 3D label; lifting a soft model prediction gives a
