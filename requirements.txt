@@ -1,0 +1,7 @@
+numpy
+fsspec
+s3fs
+pillow
+zarr
+scipy
+matplotlib
