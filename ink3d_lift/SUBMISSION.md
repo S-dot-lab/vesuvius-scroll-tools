@@ -1,8 +1,9 @@
 # Progress Prize submission — ink3d-lift
 
-Ready-to-paste content for the Vesuvius Challenge progress-prize form
-(https://forms.gle/Sy6mW5cfJS2U7E9F7). **You** submit under your own name/email.
-Submit through the current official progress-prize form/page; submit early because monthly review favors early, usable releases.
+Ready-to-paste content for the Vesuvius Challenge progress-prize form. The official page recently
+linked https://forms.gle/Sy6mW5cfJS2U7E9F7; if that old monthly form is closed, use the newest
+official progress-prize form or ask in Discord. **You** submit under your own name/email. Submit
+early because monthly review favors early, usable releases.
 
 ---
 
