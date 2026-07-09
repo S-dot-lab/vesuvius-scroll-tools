@@ -5,7 +5,7 @@ downloads, laptop-friendly. Each reads the public anonymous S3 data (`vesuvius-c
 
 ## `ink3d_lift/` — automated 2D→true-3D ink label lifting
 Ink labels are currently made by hand, and 3D labels are often one 2D image copied across depth layers.
-`ink3d_lift` automates the geometric step (~1 s/segment): it places **any** 2D ink label at its real 3D depth
+`ink3d_lift` automates the geometric step in seconds per segment on CPU: it places **any** 2D ink label at its real 3D depth
 by extruding a thin band along the surface normal from the segment's `tifxyz`, weighted by ink probability
 (ink-only). Output: labelled point cloud + sparse `zarr` label volume.
 

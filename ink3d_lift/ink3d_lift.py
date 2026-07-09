@@ -5,7 +5,7 @@ ink3d_lift.py — lift a 2D ink label into a TRUE-3D ink label on CPU (Vesuvius 
 Wishlist #192/#193: ink label generation is currently "entirely manual", and 3D labels tend to be a single 2D
 image copied across depth layers. This tool automates the step: given a segment's `tifxyz` (flattened->3D map)
 and any 2D ink label/prediction on that surface, it places the ink at its REAL 3D depth by extruding a thin band
-along the surface NORMAL, weighted by ink probability (ink-only, not surface). No GPU, no model, ~1 s/segment.
+along the surface NORMAL, weighted by ink probability (ink-only, not surface). No GPU, no model; seconds per segment on CPU.
 
 Method
 ------
@@ -47,8 +47,13 @@ def fetch_geometry(fs, seg_path):
 def fetch_ink(fs, seg_path, which):
     """Return a 2D ink map (0..1) for the chosen model, or the consensus (mean) of all renders."""
     items = [x for x in fs.ls(seg_path + "/ink-detection") if x.endswith(".tif")]
+    if not items:
+        raise FileNotFoundError(f"no ink-detection renders under {seg_path}/ink-detection")
     if which != "consensus":
-        items = [x for x in items if which in x] or items
+        matched = [x for x in items if which in x]
+        if not matched:
+            print(f"WARNING: no render matches '{which}'; using {items[0].split('/')[-1]}")
+        items = matched or items
     maps = []
     for it in items[: (None if which == "consensus" else 1)]:
         maps.append(load_tif(fs.cat(it)) / 255.0)

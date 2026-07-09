@@ -2,7 +2,7 @@
 
 Ready-to-paste content for the Vesuvius Challenge progress-prize form
 (https://forms.gle/Sy6mW5cfJS2U7E9F7). **You** submit this under your own name/email.
-Deadline: end of month, 11:59pm Pacific (monthly cycle — submit early, it's weighted).
+Submit through the current official progress-prize form/page; submit early because monthly review favors early, usable releases.
 
 ---
 
@@ -26,7 +26,7 @@ output — exactly where a cheap QA gate helps.
 compute-light quality gate. It catches *hard* geometric tears; subtle soft wrap-drift that doesn't
 tear the mesh is out of scope (would need an ink-column-continuity check — noted in IDEAS.md).
 
-**Code + docs:** <PUBLIC REPO URL — push tools/scroll_segment_qa to a public GitHub repo and paste the link>
+**Code + docs:** https://github.com/S-dot-lab/vesuvius-scroll-tools (tool in `scroll_segment_qa/`)
 
 **How to run:**
 ```
@@ -39,6 +39,6 @@ agreement; cites EduceLab-Scrolls; reveals no hidden/decoded text.
 
 ---
 ### Before you submit
-1. Push `tools/scroll_segment_qa/` to a **public GitHub repo** (under your account) and paste the URL above.
+1. Repo is already public at the URL above — nothing to push.
 2. Skim the README + this text — make sure you're comfortable with every claim.
 3. Fill the form early. Multiple submissions/month are allowed, so this can go in now.

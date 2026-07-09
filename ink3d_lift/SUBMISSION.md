@@ -2,7 +2,7 @@
 
 Ready-to-paste content for the Vesuvius Challenge progress-prize form
 (https://forms.gle/Sy6mW5cfJS2U7E9F7). **You** submit under your own name/email.
-Deadline: end of month, 11:59pm Pacific (monthly cycle — submit early, it's weighted).
+Submit through the current official progress-prize form/page; submit early because monthly review favors early, usable releases.
 
 ---
 
@@ -11,7 +11,7 @@ Deadline: end of month, 11:59pm Pacific (monthly cycle — submit early, it's we
 **Summary:**
 Ink label generation for the scrolls is currently done entirely by hand, and 3D ink labels are often a
 single 2D image copied across depth layers. `ink3d-lift` automates the geometric step on a laptop
-(~1 s/segment, no GPU): given a segment's `tifxyz` and **any** 2D ink label on that surface (a human
+(seconds per segment on CPU, no GPU): given a segment's `tifxyz` and **any** 2D ink label on that surface (a human
 label or a model prediction), it places the ink at its real 3D depth by extruding a thin band along the
 surface **normal** (`N = normalize(dP/dcol × dP/drow)`), weighted by ink probability so only detectable
 ink is labelled (blank papyrus ≈ 0). Output is a labelled point cloud plus a sparse **zarr** label
@@ -36,7 +36,7 @@ quality (crisp human label → crisp 3D label).
 **Relation to wishlist:** directly targets #192 (accurate, ink-only, true-3D labels — not "a single image
 across layers") and #193 (label-generation methods beyond simple voxelization).
 
-**Code + docs:** <PUBLIC REPO URL — push tools/ink3d_lift to a public GitHub repo and paste the link>
+**Code + docs:** https://github.com/S-dot-lab/vesuvius-scroll-tools (tool in `ink3d_lift/`)
 
 **How to run:**
 ```
@@ -50,8 +50,7 @@ agreement; cites EduceLab-Scrolls; reveals no hidden/decoded text.
 
 ---
 ### Before you submit
-1. Push `tools/ink3d_lift/` (and optionally `tools/scroll_segment_qa/`, which `--qa` uses) to a **public
-   GitHub repo** under your account; paste the URL above.
+1. Repo is already public at the URL above — nothing to push.
 2. Skim the README + this text — every number here is reproducible via `validate.py`; make sure you're
    comfortable standing behind it.
 3. Submit early. You can submit *both* tools (multiple submissions/month are allowed).

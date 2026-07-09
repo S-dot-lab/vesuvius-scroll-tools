@@ -1,6 +1,6 @@
 # ink3d-lift
 
-Lift a **2D ink label into a true-3D ink label** — on a laptop, in about a second per segment.
+Lift a **2D ink label into a true-3D ink label** on a laptop in seconds per segment.
 No GPU, no model, no training.
 
 ## Why
@@ -53,7 +53,7 @@ Run `validate.py` to check any segment against the scan volume. On PHerc0172 (Sc
 | mean CT value | 140 | 98 (background) | 1.43× |
 
 So the labels land on real papyrus far more than chance — the 3D placement is correct. Lift itself is
-**~1 s (CPU)**; the ink sits on the 3D wrap in a thin depth band, not smeared across layers (`docs/`).
+**seconds per segment on CPU**; the ink sits on the 3D wrap in a thin depth band, not smeared across layers (`docs/`).
 
 **Across 7 Scroll 5 segments** the on-papyrus ratio is consistently above chance — **mean 1.43×**, range
 1.16–1.8× (w062 1.65, w067 1.80, w078 1.60, w079 1.16, w080 1.34, w082 1.33, w083 1.46). Segments with a low
